@@ -1,0 +1,15 @@
+For getting bootstrap
+https://getbootstrap.com/
+
+For the docs
+https://getbootstrap.com/docs/5.3/
+                                ^ only this version is valid for PW2
+
+    <!-- 
+    Todas las clases con P son de padding
+    Si tienen X o Y, se refiere a los ejes, es decir, si es X, se aplica a izquierda y derecha, si es Y, se aplica a arriba y abajo
+    Si se utiliza una letra ya sea T, B, L o R, se refiere a la dirección, es decir, si es T, se aplica a arriba, si es B, se aplica a abajo, si es L, se aplica a la izquierda y si es R, se aplica a la derecha
+    Si solo se deja la P, se aplica a los 4 lados
+    Si se deja un número, se refiere a la cantidad de espacio, siendo 0 el mínimo y 5 el máximo. Si se deja auto, se ajusta automáticamente al contenido
+     -->
+
