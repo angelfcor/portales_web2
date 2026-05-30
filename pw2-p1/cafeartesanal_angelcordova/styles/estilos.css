@@ -83,10 +83,17 @@ img {
     font-size: 1.5rem;
     color: #6F4E37;
     text-align: center;
-    margin: 2.5rem auto 1.25rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid #C8963E;
-    width: fit-content;
+    margin: 2.5rem 0 1.25rem;
+    position: relative;
+}
+
+.section_title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #C8963E;
+    margin: 0.5rem auto 0;
 }
 
 .products {
@@ -205,7 +212,7 @@ img {
 
     .section_title {
         font-size: 2rem;
-        margin: 3rem auto 1.5rem;
+        margin: 3rem 0 1.5rem;
     }
 
     .product_grid {
