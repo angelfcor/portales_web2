@@ -31,31 +31,36 @@ img {
     margin: 0 auto;
 }
 
-/* ================================
-   HERO / HEADER
-   ================================ */
 .hero {
-    background-color: #6F4E37;
-    background-image: url("../img/descafeinado_web.jpg");
-    background-size: cover;
-    background-position: center;
+    position: relative;
     padding: 3rem 1rem;
     text-align: center;
     color: #fff;
-    position: relative;
+    overflow: hidden;
 }
 
-.hero::before {
-    content: "";
+.hero_bg {
     position: absolute;
     inset: 0;
+    z-index: 0;
+}
+
+.hero_bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.hero_title,
-.hero_subtitle {
+.hero_content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero_title {
@@ -73,9 +78,6 @@ img {
     margin: 0 auto;
 }
 
-/* ================================
-   TIPOGRAFÍA — TÍTULOS
-   ================================ */
 .section_title {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.5rem;
@@ -94,9 +96,6 @@ img {
     margin: 0.5rem auto 0;
 }
 
-/* ================================
-   SECCIÓN DE PRODUCTOS
-   ================================ */
 .products {
     padding-bottom: 1rem;
 }
@@ -108,9 +107,6 @@ img {
     gap: 1rem;
 }
 
-/* ================================
-   CARD DE PRODUCTO
-   ================================ */
 .card {
     background: #FFFFFF;
     border-radius: 10px;
@@ -137,9 +133,6 @@ img {
     font-weight: 700;
 }
 
-/* ================================
-   FOOTER
-   ================================ */
 .footer {
     background-color: #2C1A0E;
     color: #FAF3E0;
@@ -167,14 +160,6 @@ img {
     margin-top: 0.75rem;
 }
 
-/* ================================
-   MOBILE FIRST
-   < 600px  — móvil (base, sin media query)
-   ================================ */
-
-/* ================================
-   TABLET  — 600px+
-   ================================ */
 @media (min-width: 600px) {
     .hero {
         padding: 4rem 2rem;
@@ -211,17 +196,9 @@ img {
     }
 }
 
-/* ================================
-   ESCRITORIO  — 900px+
-   ================================ */
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
     .hero {
-        padding: 6rem 2rem;
-        min-height: 60vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 5rem 2rem;
     }
 
     .hero_title {
